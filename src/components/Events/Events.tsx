@@ -109,8 +109,15 @@ function Events() {
                 {...register("max_participants", { required: true })}
               />
               <textarea {...register("description", { required: true })} />
-
-              <input type="submit" />
+              <div className="flex justify-center gap-4">
+                <button
+                  onClick={() => setIsOpenCreate(false)}
+                  className="p-2 bg-red-500 rounded-md"
+                >
+                  annuler
+                </button>
+                <input type="submit" className="p-2 bg-green-500 rounded-md" />
+              </div>
             </form>
           </div>
         </div>
